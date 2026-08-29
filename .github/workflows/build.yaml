@@ -12,5 +12,5 @@ jobs:
           node-version: 24.18.0
       - name: installing dependencies
         run: npm ci
-      - name: testing app
-        run: npm run dev
+      - name: building app
+        run: npm run build
