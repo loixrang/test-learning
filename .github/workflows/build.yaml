@@ -2,7 +2,7 @@ name: Building my site
 on: [ 'push', 'workflow_dispatch' ]
 jobs:
   build:
-    runs-on: ubuntu-slim
+    runs-on: ubuntu-latest
     steps:
       - name: getting my code first
         uses: actions/checkout@v7
