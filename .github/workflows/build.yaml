@@ -1,4 +1,4 @@
-name: Testing and Building my app
+name: Building my site
 on: push
 jobs:
   build:
@@ -12,5 +12,5 @@ jobs:
           node-version: 24.18.0
       - name: installing dependencies
         run: npm ci
-      - name: building app
+      - name: building site
         run: npm run build
