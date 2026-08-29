@@ -13,4 +13,4 @@ jobs:
       - name: installing dependencies
         run: npm ci
       - name: building site
-        run: npm run preview
+        run: npm run build
