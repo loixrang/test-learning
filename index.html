@@ -5,9 +5,48 @@
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>CI-CD</title>
-    <link rel="stylesheet" href="src/style.css">
+    <link rel="stylesheet" href="src/style.css" />
   </head>
   <body>
     <h1 class="bg-red-500">Learning how to use CI/CD with this project</h1>
+    <button
+      id="showDialog"
+      class="bg-gray-400 hover:opacity-90 cursor-pointer active:opacity-80 p-2 rounded-sm m-2"
+    >
+      Show Dialog
+    </button>
+    <dialog
+      id="dialog"
+      class="rounded-xl mx-auto my-auto p-0 backdrop:bg-black/50"
+    >
+      <h2 class="m-5">Hey, I'm inside the dialog</h2>
+      <button
+        id="closeDialog"
+        class="bg-gray-400 hover:opacity-90 cursor-pointer active:opacity-80 p-2 rounded-sm m-2"
+      >
+        Close Dialog
+      </button>
+    </dialog>
+
+    <script>
+      const $ = (q) => document.getElementById(q);
+      let show = $("showDialog");
+      let hide = $("closeDialog");
+      let dialog = $("dialog");
+
+      show.addEventListener("click", () => {
+        dialog.showModal();
+      });
+
+      hide.addEventListener("click", () => {
+        dialog.close();
+      });
+
+      dialog.addEventListener("click", (event) => {
+        if (event.target === dialog) {
+          dialog.close();
+        }
+      });
+    </script>
   </body>
 </html>
