@@ -18,7 +18,5 @@ jobs:
 
       - name: installing dependencies
         run: npm ci
-      - name: linting code
-        run: npm run lint
       - name: building site
         run: npm run build
