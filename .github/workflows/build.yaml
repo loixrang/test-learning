@@ -18,8 +18,6 @@ jobs:
 
       - name: installing dependencies
         run: npm ci
-      - name: installing eslint
-        run: npm install -D eslint
       - name: linting code
         run: npm run lint
       - name: building site
